@@ -1,0 +1,33 @@
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 171px;
+}
+.logoWrapper {
+	margin: 0 0 0 100px;
+}
+.logo {
+	width: 210.32px;
+	height: 68px;
+}
+
+.links {
+	margin: 0 100px 10px 10px;
+	font-size: 24px;
+	line-height: 34.22px;
+}
+
+.linkAbout {
+	margin-left: 57px;
+	color: rgba(255, 96, 96, 1);
+}
+
+.linkHome {
+	color: rgba(255, 96, 96, 1);
+}

@@ -1,0 +1,25 @@
+.home {
+	display: flex;
+	justify-content: center;
+}
+
+.homeTitleImage {
+	width: 60%;
+	height: 223px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: url("../../assets/backgroundTitle.jpg");
+	mix-blend-mode: darken;
+	filter: brightness(70%);
+	position: absolute;
+	border-radius: 25px;
+}
+.homeTitle {
+	color: #ffff;
+	font-size: 48px;
+	position: absolute;
+	top: 250px;
+	height: 223px;
+	text-align: center;
+}
