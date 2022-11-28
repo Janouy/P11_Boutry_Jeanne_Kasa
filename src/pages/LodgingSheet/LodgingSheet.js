@@ -4,4 +4,4 @@ function LodgingSheet() {
 	return <div>Fiche logement</div>;
 }
 
-export default LodgingSheet();
+export default LodgingSheet;
