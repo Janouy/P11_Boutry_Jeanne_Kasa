@@ -16,4 +16,54 @@
 	font-size: 36px;
 }
 .linkHome {
+	margin-top: 182px;
+	color: #ff6060;
+	font-size: 18px;
+	text-decoration: underline;
+}
+
+@media only screen and (max-width: 1240px) {
+	.error {
+		width: 992px;
+	}
+}
+
+@media only screen and (max-width: 992px) {
+	.error {
+		width: 768px;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.error {
+		width: 600px;
+	}
+	.codeError {
+		font-size: 86px;
+	}
+
+	.messageError {
+		font-size: 24px;
+	}
+	.linkHome {
+		font-size: 18px;
+		margin-top: 130px;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.error {
+		width: 100%;
+	}
+	.codeError {
+		font-size: 96px;
+	}
+
+	.messageError {
+		font-size: 18px;
+	}
+	.linkHome {
+		font-size: 14px;
+		margin-top: 130px;
+	}
 }

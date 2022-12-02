@@ -7,8 +7,18 @@ function Home() {
 
 	useEffect(() => {
 		fetch("annonces.json")
-			.then((response) => response.json())
-			.then((datas) => setLeasesData(datas));
+			.then((response) => {
+				console.log(response);
+				if (response.ok) {
+					return response.json();
+				} else if (response.status === 404) {
+					return Promise.reject("error 404");
+				} else {
+					return Promise.reject("some other error: " + response.status);
+				}
+			})
+			.then((data) => setLeasesData(data))
+			.catch((error) => console.log("error is", error));
 	}, []);
 
 	return (
