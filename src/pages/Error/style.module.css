@@ -1,0 +1,19 @@
+.error {
+	width: 1240px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	color: #ff6060;
+}
+
+.codeError {
+	font-weight: 700;
+	font-size: 288px;
+}
+
+.messageError {
+	font-weight: 500;
+	font-size: 36px;
+}
+.linkHome {
+}

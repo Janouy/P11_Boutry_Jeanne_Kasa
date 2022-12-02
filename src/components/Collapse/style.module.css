@@ -1,0 +1,76 @@
+.collapse {
+	width: 1023px;
+}
+.collapseTitle {
+	display: flex;
+	height: 47px;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 24px;
+	font-weight: 500;
+	border-radius: 5px;
+	padding: 0px 15px 0px 15px;
+	margin-top: 24px;
+	background-color: rgba(255, 96, 96, 1);
+	color: #fff;
+}
+
+.collapseContent {
+	position: relative;
+	top: -10px;
+	z-index: -5555;
+	font-size: 24px;
+	color: rgba(255, 96, 96, 1);
+	background-color: rgba(246, 246, 246, 1);
+	text-align: left;
+	padding: 46px 27px 10px 18px;
+	border-radius: 5px;
+}
+
+.displayNone {
+	display: none;
+}
+@media only screen and (max-width: 1240px) {
+}
+
+@media only screen and (max-width: 992px) {
+	.collapse {
+		width: 100%;
+	}
+	.collapseTitle {
+		font-size: 18px;
+		height: 30px;
+	}
+	.collapseContent {
+		font-size: 14px;
+		padding: 23px 7px 53px 12px;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.collapse {
+		width: 100%;
+	}
+	.collapseTitle {
+		font-size: 13px;
+		height: 30px;
+	}
+	.collapseContent {
+		font-size: 12px;
+		padding: 23px 7px 53px 12px;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.collapse {
+		width: 100%;
+	}
+	.collapseTitle {
+		font-size: 13px;
+		height: 30px;
+	}
+	.collapseContent {
+		font-size: 12px;
+		padding: 23px 7px 53px 12px;
+	}
+}

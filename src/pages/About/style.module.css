@@ -1,0 +1,75 @@
+.about {
+	width: 1240px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.aboutPicture {
+	width: 100%;
+	height: 223px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: url("../../assets/backgroundAbout.jpg");
+	mix-blend-mode: darken;
+	filter: brightness(70%);
+	border-radius: 25px;
+}
+
+.collapsesWrapper {
+	margin-top: 50px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+@media only screen and (max-width: 1240px) {
+	.about {
+		width: 992px;
+	}
+}
+
+@media only screen and (max-width: 992px) {
+	.about {
+		width: 768px;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.about {
+		width: 600px;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.about {
+		width: 335px;
+		align-items: center;
+	}
+	.collapsesWrapper {
+		width: 100%;
+	}
+	.aboutPicture {
+		width: 100%;
+		background-image: url("../../assets/backgroundAboutMini.png");
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+}
+
+@media only screen and (max-width: 300px) {
+	.about {
+		width: 250px;
+		align-items: center;
+	}
+	.collapsesWrapper {
+		width: 100%;
+	}
+	.aboutPicture {
+		width: 100%;
+		background-image: url("../../assets/backgroundAboutMini.png");
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+}

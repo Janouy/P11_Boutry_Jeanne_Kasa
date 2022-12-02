@@ -4,6 +4,7 @@ import Card from "../../components/Card/Card";
 
 function Home() {
 	const [leasesDatas, setLeasesData] = useState([]);
+
 	useEffect(() => {
 		fetch("annonces.json")
 			.then((response) => response.json())

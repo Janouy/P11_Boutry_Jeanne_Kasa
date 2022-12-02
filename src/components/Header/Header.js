@@ -1,18 +1,10 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
 import styles from "./style.module.css";
 import Logo from "../../assets/logo.png";
 
 function Header() {
-	const [pageSelected, setPageSelected] = useState("home");
-
-	useEffect(() => {
-		pageSelected !== undefined && pageSelected === "home"
-			? (document.getElementById(`homeLink`).style.textDecoration = "underline") &&
-			  (document.getElementById(`aboutLink`).style.textDecoration = "none")
-			: (document.getElementById(`aboutLink`).style.textDecoration = "underline") &&
-			  (document.getElementById(`homeLink`).style.textDecoration = "none");
-	}, [pageSelected]);
+	const location = useLocation();
 	return (
 		<div className={styles.header}>
 			<div className={styles.logoWrapper}>
@@ -21,10 +13,18 @@ function Header() {
 				</Link>
 			</div>
 			<div className={styles.links}>
-				<Link className={styles.linkHome} id="homeLink" to="/" onClick={() => setPageSelected("home")}>
+				<Link
+					className={location.pathname === "/" ? styles.underlineLinkHome : styles.linkHome}
+					id="homeLink"
+					to="/"
+				>
 					Accueil
 				</Link>
-				<Link className={styles.linkAbout} id="aboutLink" to="/about" onClick={() => setPageSelected("about")}>
+				<Link
+					className={location.pathname === "/about" ? styles.underlineLinkAbout : styles.linkAbout}
+					id="aboutLink"
+					to="/about"
+				>
 					A propos
 				</Link>
 			</div>
