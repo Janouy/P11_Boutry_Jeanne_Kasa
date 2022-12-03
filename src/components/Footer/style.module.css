@@ -1,0 +1,31 @@
+.footer {
+	width: 100%;
+	margin-top: 50px;
+	background-color: black;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	padding-top: 66px;
+	padding-bottom: 66px;
+}
+
+.logo {
+	width: 122px;
+}
+.copyright {
+	background-image: url("../../assets/copyright.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 80%;
+	height: 46px;
+}
+
+@media only screen and (max-width: 600px) {
+	.copyright {
+		background-image: url("../../assets/copyrightMini.png");
+		background-repeat: no-repeat;
+		background-position: center;
+		height: 46px;
+	}
+}

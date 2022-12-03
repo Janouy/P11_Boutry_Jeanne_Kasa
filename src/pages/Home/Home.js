@@ -8,7 +8,6 @@ function Home() {
 	useEffect(() => {
 		fetch("annonces.json")
 			.then((response) => {
-				console.log(response);
 				if (response.ok) {
 					return response.json();
 				} else if (response.status === 404) {
@@ -27,12 +26,10 @@ function Home() {
 				<div className={styles.homeTitleImage}></div>
 				<div className={styles.homeTitle}>Chez vous, partout et ailleurs</div>
 			</div>
-			<div className={styles.leaseCardsWrapper}>
-				<div className={styles.leaseCards}>
-					{leasesDatas.map((lease) => (
-						<Card key={lease.id} leaseName={lease.title} />
-					))}
-				</div>
+			<div className={styles.leaseCards}>
+				{leasesDatas.map((lease) => (
+					<Card key={lease.id} leaseName={lease.title} />
+				))}
 			</div>
 		</div>
 	);
