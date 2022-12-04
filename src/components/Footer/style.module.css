@@ -8,6 +8,8 @@
 	align-items: center;
 	padding-top: 66px;
 	padding-bottom: 66px;
+	position: relative;
+	bottom: 0;
 }
 
 .logo {

@@ -1,14 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./style.module.css";
 
-function Card({ leaseName }) {
+function Card({ leaseInfo }) {
 	return (
-		<div className={styles.cardWrapper}>
+		<Link to={`/${leaseInfo.id}`} className={styles.cardWrapper}>
 			<div className={styles.card1}></div>
 			<div className={styles.card2}>
-				<div className={styles.cardTitle}>{leaseName}</div>
+				<div className={styles.cardTitle}>{leaseInfo.title}</div>
 			</div>
-		</div>
+		</Link>
 	);
 }
 

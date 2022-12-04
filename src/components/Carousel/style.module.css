@@ -1,0 +1,136 @@
+@keyframes opac {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.carouselPict {
+	width: 1240px;
+	height: 415px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	z-index: -5;
+	border-radius: 25px;
+	-webkit-animation: opac 1.5s;
+	animation: opac 1.5s;
+	transition: all 1000ms ease-in-out;
+}
+.buttonsWrapper {
+	display: flex;
+	justify-content: space-between;
+	height: 415px;
+}
+.leftButton,
+.rightButton {
+	position: relative;
+	top: 40%;
+	z-index: 5;
+	cursor: pointer;
+}
+.leftArrow {
+	width: 47px;
+	height: 80px;
+	margin-left: 10px;
+}
+
+.rightArrow {
+	width: 47px;
+	height: 80px;
+	margin-right: 10px;
+}
+
+.bulletPoints {
+	position: relative;
+	top: -50px;
+	display: flex;
+	justify-content: center;
+}
+.bulletPoint {
+	color: #fff;
+	font-size: 32px;
+	font-weight: 500;
+	padding-left: 5px;
+}
+.selectedBulletPoint {
+	color: #ff6060;
+	font-size: 32px;
+	font-weight: 500;
+	padding-left: 5px;
+}
+@media only screen and (max-width: 1240px) {
+	.carouselPict {
+		width: 992px;
+	}
+}
+@media only screen and (max-width: 992px) {
+	.carouselPict {
+		width: 768px;
+		height: 320px;
+	}
+
+	.buttonsWrapper {
+		height: 320px;
+	}
+
+	.leftArrow {
+		width: 36px;
+		height: 70px;
+	}
+
+	.rightArrow {
+		width: 36px;
+		height: 70px;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.carouselPict {
+		width: 600px;
+		height: 320px;
+	}
+
+	.buttonsWrapper {
+		height: 320px;
+	}
+	.leftButton,
+	.rightButton {
+		top: 42%;
+	}
+	.leftArrow {
+		width: 28px;
+		height: 50px;
+	}
+
+	.rightArrow {
+		width: 28px;
+		height: 50px;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.carouselPict {
+		width: 335px;
+		height: 255px;
+	}
+
+	.buttonsWrapper {
+		height: 255px;
+	}
+	.leftButton,
+	.rightButton {
+		top: 45%;
+	}
+	.leftArrow {
+		width: 12px;
+		height: 20px;
+	}
+
+	.rightArrow {
+		width: 12px;
+		height: 20px;
+	}
+}

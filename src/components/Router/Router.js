@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "../../pages/Home/Home";
 import About from "../../pages/About/About";
@@ -6,11 +6,21 @@ import LodgingSheet from "../../pages/LodgingSheet/LodgingSheet";
 import Error from "../../pages/Error/Error";
 
 function Router() {
+	const [leasesDatas, setLeasesData] = useState([]);
+	const [isLoading, setIsLoading] = useState(false);
+	useEffect(() => {
+		setIsLoading(true);
+		fetch("annonces.json")
+			.then((response) => response.json())
+			.then((datas) => setLeasesData(datas), setIsLoading(false));
+	}, []);
+
 	return (
 		<Routes>
-			<Route path="/" element={<Home />} />
+			<Route path="/:id" element={<LodgingSheet leasesDatas={leasesDatas} isLoading={isLoading} />} />
+			<Route path="/" element={<Home leasesDatas={leasesDatas} isLoading={isLoading} />} />
 			<Route path="/about" element={<About />} />
-			<Route path="/lodgingSheet" element={<LodgingSheet />} />
+
 			<Route path="/*" element={<Error />} />
 		</Routes>
 	);
