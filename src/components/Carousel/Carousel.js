@@ -6,6 +6,7 @@ import rightArrow from "../../assets/rightArrow.png";
 function Carousel({ pictures }) {
 	const [currentIndex, setCurrentIndex] = useState(0);
 	const numberOfPictures = pictures.length;
+
 	const nextPict = () => {
 		if (currentIndex === numberOfPictures - 1) {
 			setCurrentIndex(0);

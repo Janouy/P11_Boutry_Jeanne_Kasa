@@ -9,10 +9,13 @@ function Router() {
 	const [leasesDatas, setLeasesData] = useState([]);
 	const [isLoading, setIsLoading] = useState(false);
 	useEffect(() => {
-		setIsLoading(true);
-		fetch("annonces.json")
-			.then((response) => response.json())
-			.then((datas) => setLeasesData(datas), setIsLoading(false));
+		async function fetchDatas() {
+			setIsLoading(true);
+			await fetch("annonces.json")
+				.then((response) => response.json())
+				.then((datas) => setLeasesData(datas), setIsLoading(false));
+		}
+		fetchDatas();
 	}, []);
 
 	return (
@@ -20,7 +23,6 @@ function Router() {
 			<Route path="/:id" element={<LodgingSheet leasesDatas={leasesDatas} isLoading={isLoading} />} />
 			<Route path="/" element={<Home leasesDatas={leasesDatas} isLoading={isLoading} />} />
 			<Route path="/about" element={<About />} />
-
 			<Route path="/*" element={<Error />} />
 		</Routes>
 	);
