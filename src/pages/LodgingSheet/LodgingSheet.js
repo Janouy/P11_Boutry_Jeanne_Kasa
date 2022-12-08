@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import styles from "./style.module.css";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import Loader from "../../components/Loader/Loader";
 import Carousel from "../../components/Carousel/Carousel";
 import Tags from "../../components/Tags/Tags";
 import Collapse from "../../components/Collapse/Collapse";
 
 function LodgingSheet({ leasesDatas, isLoading }) {
-	let params = useParams();
+	const params = useParams();
+	const navigate = useNavigate();
 	const [leasesPictures, setleasesPictures] = useState([]);
 	const [leasesInfos, setleasesInfos] = useState({});
 	const [tags, setTags] = useState([]);
@@ -34,7 +35,11 @@ function LodgingSheet({ leasesDatas, isLoading }) {
 			});
 		}
 	}, [params.id, leasesDatas]);
-
+	useEffect(() => {
+		if (leasesDatas.every((data) => data.id !== params.id)) {
+			navigate("/*");
+		}
+	}, [params.id, leasesDatas, navigate]);
 	useEffect(() => {
 		setRedStars([]);
 		setGreyStars([]);

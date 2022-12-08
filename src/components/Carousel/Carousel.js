@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styles from "./style.module.css";
 import leftArrow from "../../assets/leftArrow.png";
 import rightArrow from "../../assets/rightArrow.png";
-import Loader from "../../components/Loader/Loader";
 
 function Carousel({ pictures }) {
 	const [currentIndex, setCurrentIndex] = useState(0);
