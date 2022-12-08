@@ -30,12 +30,15 @@
 .displayNone {
 	display: none;
 }
+.btnCollapse {
+	cursor: pointer;
+}
 @media only screen and (max-width: 1240px) {
 }
 
 @media only screen and (max-width: 992px) {
 	.collapse {
-		width: 100%;
+		width: 85%;
 	}
 	.collapseTitle {
 		font-size: 18px;
@@ -48,9 +51,6 @@
 }
 
 @media only screen and (max-width: 768px) {
-	.collapse {
-		width: 100%;
-	}
 	.collapseTitle {
 		font-size: 13px;
 		height: 30px;

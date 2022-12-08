@@ -1,13 +1,159 @@
 .lodgingSheet {
-	width: 100%;
-	height: 100vh;
+	width: 90%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
+.carouselPict {
+	width: 100%;
+}
 .lScarousel {
+	width: 100%;
 	height: 415px;
 	border-radius: 25px;
 	display: flex;
 	justify-content: center;
+}
+.lSContent {
+	width: 100%;
+}
+.lSTop {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 24px;
+}
+.lSLeftPart {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: flex-start;
+	padding-bottom: 10px;
+}
+.lSTitle {
+	font-size: 36px;
+	font-weight: 500;
+	color: #ff6060;
+}
+.lSLocation {
+	font-size: 18px;
+	font-weight: 500;
+	color: #ff6060;
+}
+.lSRightPart {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.lSHost {
+	display: flex;
+	align-items: center;
+}
+.lSHostName {
+	font-size: 18px;
+	font-weight: 500;
+	padding-right: 10px;
+	width: 93px;
+	color: #ff6060;
+}
+.lSHostPict {
+	border-radius: 100px;
+	width: 64px;
+}
+.lSRating {
+	display: flex;
+	justify-content: center;
+}
+.lSStar {
+	width: 30px;
+	height: 30px;
+}
+.lSCollapses {
+	display: flex;
+}
+.lSDescription {
+	width: 50%;
+}
+
+.lSEquipment {
+	width: 50%;
+}
+
+@media only screen and (max-width: 992px) {
+	.lSTitle {
+		font-size: 28px;
+	}
+	.lScarousel {
+		width: 100%;
+		height: 350px;
+	}
+}
+
+@media only screen and (max-width: 798px) {
+	.lSTitle {
+		font-size: 24px;
+	}
+	.lSLocation {
+		font-size: 18px;
+	}
+	.lSTop {
+		display: flex;
+		flex-direction: column;
+	}
+	.lSRightPart {
+		flex-direction: row-reverse;
+	}
+	.lSRating {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.lSTitle {
+		font-size: 18px;
+		text-align: left;
+		padding-bottom: 10px;
+	}
+	.lSLocation {
+		font-size: 14px;
+	}
+	.lSTop {
+		display: flex;
+		flex-direction: column;
+	}
+	.lSStar {
+		width: 15px;
+		height: 15px;
+	}
+	.lScarousel {
+		width: 100%;
+		height: 280px;
+	}
+	.lSCollapses {
+		margin-top: 5px;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
+	.lSDescription {
+		width: 100%;
+	}
+
+	.lSEquipment {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 374px) {
+	.lSTitle {
+		font-size: 14px;
+		text-align: left;
+	}
+	.lSLocation {
+		font-size: 12px;
+	}
+	.lSHostName {
+		padding-right: 0px;
+	}
 }

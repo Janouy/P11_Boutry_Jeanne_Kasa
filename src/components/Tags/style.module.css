@@ -1,0 +1,43 @@
+.tags {
+	display: flex;
+}
+
+.tag {
+	color: #ffff;
+	font-size: 14px;
+	font-weight: 500;
+	height: 25px;
+	border-radius: 10px;
+	background-color: #ff6060;
+	margin-top: 20px;
+	margin-left: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-left: 35px;
+	padding-right: 35px;
+}
+
+@media only screen and (max-width: 798px) {
+	.tag {
+		font-size: 14px;
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.tag {
+		font-size: 10px;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+
+@media only screen and (max-width: 374px) {
+	.tag {
+		font-size: 10px;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+}

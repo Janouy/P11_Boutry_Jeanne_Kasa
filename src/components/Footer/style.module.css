@@ -23,6 +23,12 @@
 	height: 46px;
 }
 
+@media only screen and (max-width: 920) {
+	.footer {
+		margin-top: 150px;
+	}
+}
+
 @media only screen and (max-width: 600px) {
 	.copyright {
 		background-image: url("../../assets/copyrightMini.png");

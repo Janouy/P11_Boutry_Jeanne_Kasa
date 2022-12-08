@@ -3,9 +3,11 @@ import styles from "./style.module.css";
 
 function Tags({ tags }) {
 	return (
-		<div>
+		<div className={styles.tags}>
 			{tags.map((tag, index) => (
-				<div key={index}>{tag}</div>
+				<div className={styles.tag} key={index}>
+					{tag}
+				</div>
 			))}
 		</div>
 	);
