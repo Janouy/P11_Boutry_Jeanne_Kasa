@@ -1,0 +1,23 @@
+.lSRating {
+	display: flex;
+	justify-content: center;
+}
+.lSStar {
+	width: 30px;
+	height: 30px;
+}
+
+@media only screen and (max-width: 798px) {
+	.lSRating {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.lSStar {
+		width: 15px;
+		height: 15px;
+	}
+}

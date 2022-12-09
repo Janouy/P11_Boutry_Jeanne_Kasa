@@ -59,23 +59,17 @@
 	border-radius: 100px;
 	width: 64px;
 }
-.lSRating {
-	display: flex;
-	justify-content: center;
-}
-.lSStar {
-	width: 30px;
-	height: 30px;
-}
+
 .lSCollapses {
 	display: flex;
+	justify-content: space-between;
 }
 .lSDescription {
-	width: 50%;
+	width: 45%;
 }
 
 .lSEquipment {
-	width: 50%;
+	width: 45%;
 }
 
 @media only screen and (max-width: 992px) {

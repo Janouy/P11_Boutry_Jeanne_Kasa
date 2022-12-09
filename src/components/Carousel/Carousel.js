@@ -40,7 +40,6 @@ function Carousel({ pictures }) {
 						</div>
 					</div>
 					<div className={styles.bulletPoints}>
-						{" "}
 						{pictures.map((pict, index) =>
 							index === currentIndex ? (
 								<div className={styles.selectedBulletPoint} key={pict}>

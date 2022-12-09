@@ -5,6 +5,7 @@ import Loader from "../../components/Loader/Loader";
 import Carousel from "../../components/Carousel/Carousel";
 import Tags from "../../components/Tags/Tags";
 import Collapse from "../../components/Collapse/Collapse";
+import Rating from "../../components/Rating/Rating";
 
 function LodgingSheet({ leasesDatas, isLoading }) {
 	const params = useParams();
@@ -15,11 +16,11 @@ function LodgingSheet({ leasesDatas, isLoading }) {
 	const [host, setHost] = useState({});
 	const [equipments, setEquipments] = useState({});
 	const [description, setDescription] = useState({});
-	const [redStars, setRedStars] = useState([]);
-	const [greyStars, setGreyStars] = useState([]);
 
 	useEffect(() => {
-		if (leasesDatas.length !== 0) {
+		if (leasesDatas.length !== 0 && leasesDatas.every((data) => data.id !== params.id)) {
+			navigate("/*");
+		} else if (leasesDatas.length !== 0) {
 			const thisLease = leasesDatas.find((lease) => lease.id === params.id);
 			setleasesPictures(thisLease.pictures);
 			setTags(thisLease.tags);
@@ -34,24 +35,8 @@ function LodgingSheet({ leasesDatas, isLoading }) {
 				text: thisLease.description,
 			});
 		}
-	}, [params.id, leasesDatas]);
-	useEffect(() => {
-		if (leasesDatas.every((data) => data.id !== params.id)) {
-			navigate("/*");
-		}
 	}, [params.id, leasesDatas, navigate]);
-	useEffect(() => {
-		setRedStars([]);
-		setGreyStars([]);
-		if (leasesInfos.rating) {
-			for (let i = 0; i < Number(leasesInfos.rating); i++) {
-				setRedStars((stars) => [...stars, "star"]);
-			}
-			for (let i = 0; i < 5 - Number(leasesInfos.rating); i++) {
-				setGreyStars((stars) => [...stars, "star"]);
-			}
-		}
-	}, [leasesInfos]);
+
 	return (
 		<div className={styles.lodgingSheet}>
 			{isLoading ? (
@@ -76,28 +61,7 @@ function LodgingSheet({ leasesDatas, isLoading }) {
 									<div className={styles.lSHostName}>{host.name}</div>
 									<img className={styles.lSHostPict} src={host.picture} alt={host.name} />
 								</div>
-								<div className={styles.lSRating}>
-									{redStars.map((star, index) => (
-										<div className={styles.lSStar} key={index}>
-											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" fill="none">
-												<path
-													d="M18.645 12L15 0L11.355 12H0L9.27 18.615L5.745 30L15 22.965L24.27 30L20.745 18.615L30 12H18.645Z"
-													fill="#FF6060"
-												/>
-											</svg>
-										</div>
-									))}
-									{greyStars.map((star, index) => (
-										<div className={styles.lSStar} key={index}>
-											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" fill="none">
-												<path
-													d="M18.645 12L15 0L11.355 12H0L9.27 18.615L5.745 30L15 22.965L24.27 30L20.745 18.615L30 12H18.645Z"
-													fill="#E3E3E3"
-												/>
-											</svg>
-										</div>
-									))}
-								</div>
+								<Rating rating={leasesInfos.rating} />
 							</div>
 						</div>
 						<div className={styles.lSCollapses}>

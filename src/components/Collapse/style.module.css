@@ -1,5 +1,5 @@
 .collapse {
-	width: 90%;
+	width: 100%;
 }
 .collapseTitle {
 	display: flex;
@@ -37,9 +37,6 @@
 }
 
 @media only screen and (max-width: 992px) {
-	.collapse {
-		width: 85%;
-	}
 	.collapseTitle {
 		font-size: 18px;
 		height: 30px;
