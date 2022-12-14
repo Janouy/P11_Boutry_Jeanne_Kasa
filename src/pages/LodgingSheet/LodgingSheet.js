@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import styles from "./style.module.css";
 import { useParams, useNavigate } from "react-router-dom";
 import Loader from "../../components/Loader/Loader";
@@ -6,9 +6,11 @@ import Carousel from "../../components/Carousel/Carousel";
 import Tags from "../../components/Tags/Tags";
 import Collapse from "../../components/Collapse/Collapse";
 import Rating from "../../components/Rating/Rating";
+import { LeasesContext } from "../../utils/Context/index";
 
-function LodgingSheet({ leasesDatas, isLoading }) {
+function LodgingSheet() {
 	const params = useParams();
+	const { leasesDatas, isLoading } = useContext(LeasesContext);
 	const navigate = useNavigate();
 	const [leasesPictures, setleasesPictures] = useState([]);
 	const [leasesInfos, setleasesInfos] = useState({});

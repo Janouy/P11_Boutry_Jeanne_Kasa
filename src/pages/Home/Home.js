@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./style.module.css";
 import Card from "../../components/Card/Card";
 import Loader from "../../components/Loader/Loader";
+import { LeasesContext } from "../../utils/Context/index";
 
-function Home({ isLoading, leasesDatas }) {
+function Home() {
+	const { leasesDatas, isLoading } = useContext(LeasesContext);
 	return (
 		<div className={styles.home}>
 			<div className={styles.homeTitleImageWrapper}>
