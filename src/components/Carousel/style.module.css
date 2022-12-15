@@ -30,6 +30,7 @@
 	top: 40%;
 	z-index: 5;
 	cursor: pointer;
+	height: 80px;
 }
 .leftArrow {
 	width: 47px;

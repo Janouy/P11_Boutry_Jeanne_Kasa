@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import styles from "./syle.module.css";
+import styles from "./style.module.css";
 
 function Rating({ rating }) {
 	const [redStars, setRedStars] = useState([]);
