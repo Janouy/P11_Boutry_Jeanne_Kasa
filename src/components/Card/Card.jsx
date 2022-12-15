@@ -5,7 +5,12 @@ import styles from "./style.module.css";
 function Card({ leaseInfo }) {
 	return (
 		<Link to={`/lodgingSheet/${leaseInfo.id}`} className={styles.cardWrapper}>
-			<div className={styles.cardColored}></div>
+			<div
+				className={styles.cardCover}
+				style={{
+					backgroundImage: `url(${leaseInfo.cover})`,
+				}}
+			></div>
 			<div className={styles.cardGradient}>
 				<div className={styles.cardTitle}>{leaseInfo.title}</div>
 			</div>
